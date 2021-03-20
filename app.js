@@ -6,12 +6,15 @@ new Vue({
         eventTitle: "Thy Title",
         eventDescription: "Thy Description"
         },
-        guestName: '',
+        newNameText: '',
         guestList: []
     },
     methods: {
         formSubmit: function() {
-            this.guestList.push(this.guestName)
+            if(this.newNameText.length > 0){
+                this.guestList.push(this.newNameText)
+                this.newNameText = ''
+            }
         }
     }
 });
