@@ -49,9 +49,12 @@
                         <div class="card-header">
                           Featured
                         </div>
-                        <div class="card-body">
+                        <div v-if="guestList.length > 0" class="card-body">
                           <h5 class="card-title">List of guests</h5>
                           <p class="card-text" v-for="name in guestList">{{name}}</p>
+                        </div>
+                        <div v-else class="card-body">
+                          <h5 class="card-title">No guests yet :(</h5>
                         </div>
                       </div>
                 </div>
