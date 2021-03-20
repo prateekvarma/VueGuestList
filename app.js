@@ -7,13 +7,16 @@ new Vue({
         eventDescription: "Thy Description"
         },
         newNameText: '',
-        guestList: []
+        guestList: [],
+        makeGreen: ''
     },
     methods: {
         formSubmit: function() {
             if(this.newNameText.length > 0){
                 this.guestList.push(this.newNameText)
+                // following is to clear input text after submit
                 this.newNameText = ''
+                this.makeGreen = 'greenBgClass'
             }
         }
     }
