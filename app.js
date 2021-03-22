@@ -8,15 +8,18 @@ new Vue({
         },
         newNameText: '',
         guestList: [],
-        makeGreen: ''
+        makeGreen: '',
+        eventCapacity: 25,
+        eventCapacityPercentage: 0
     },
     methods: {
         formSubmit: function() {
-            if(this.newNameText.length > 0){
+            if(this.newNameText.length > 0 && this.eventCapacityPercentage < 100){
                 this.guestList.push(this.newNameText)
                 // following is to clear input text after submit
                 this.newNameText = ''
-                this.makeGreen = 'greenBgClass'
+                this.makeGreen = 'greenBgClass',
+                this.eventCapacityPercentage = this.guestList.length / (this.eventCapacity/100)
             }
         }
     }
