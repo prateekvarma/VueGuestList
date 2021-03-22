@@ -33,7 +33,7 @@
                         <div class="card-body">
                           <form class="form-inline" v-on:submit.prevent="formSubmit">
                             <div class="form-group mx-sm-3 mb-2">
-                              <input type="text" class="form-control"  placeholder="Type Guest Name" v-model="newNameText">
+                              <input type="text" class="form-control"  placeholder="Type Guest Name" v-model="newNameText" @keyup.space="spacePressMethod">
                             </div>
                             <button type="submit" class="btn btn-primary mb-2">Add Guest</button>
                           </form>

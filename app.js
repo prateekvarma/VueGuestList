@@ -21,6 +21,9 @@ new Vue({
                 this.makeGreen = 'greenBgClass',
                 this.eventCapacityPercentage = this.guestList.length / (this.eventCapacity/100)
             }
+        },
+        spacePressMethod: function() {
+            console.log('Escape key pressed')
         }
     }
 });
